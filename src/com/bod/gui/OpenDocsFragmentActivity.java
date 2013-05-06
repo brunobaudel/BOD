@@ -39,7 +39,7 @@ public abstract class OpenDocsFragmentActivity extends Fragment implements Atual
 	}
 	
 	class TransactionTask extends AsyncTask<Void, Void, Boolean> {
-		private static final String TAG = "MobiTaxi";
+		private static final String TAG = "BOD";
 		
 		private final IAssyncTask transaction;
 		private Bundle parametros;

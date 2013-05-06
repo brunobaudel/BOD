@@ -47,7 +47,7 @@ public abstract class BODActivityMap extends FragmentActivity {
 	}
 	
 	class TransactionTask extends AsyncTask<Void, Void, Boolean> {
-		private static final String TAG = "MobiTaxi";
+		private static final String TAG = "BOD";
 		
 		private final IAssyncTask transaction;
 		private Bundle parametros;

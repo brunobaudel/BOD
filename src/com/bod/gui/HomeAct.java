@@ -1,17 +1,17 @@
 package com.bod.gui;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
+import com.bod.IAssyncTask;
 import com.bod.R;
-import com.bod.parsers.ParserArquivoToInsertBD;
 
-public class HomeAct extends Activity implements OnClickListener{
+public class HomeAct extends BODActivity implements OnClickListener, IAssyncTask{
 	
 	
 	@Override
@@ -19,11 +19,11 @@ public class HomeAct extends Activity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		 //ParserArquivoToInsertBD.execParse(R.raw.insettbl_paradas, this);
+		
 	       
 		
 		 ((Button)findViewById(R.id.btAbrirMapa)).setOnClickListener(this);
-		
+		 startTask(new Bundle());
 	}
 	
 	
@@ -31,6 +31,44 @@ public class HomeAct extends Activity implements OnClickListener{
 	public void onClick(View v) {
 		Intent it = new Intent(this, ContainerBusca.class);
 		startActivity(it);
+		
+	}
+
+
+	@Override
+	public void preExecute(Bundle parametro) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void execute(Bundle parametro) throws Exception {
+		 //ParserArquivoToInsertBD.execParse(R.raw.insettbl_paradas, this);
+		
+	}
+
+
+	@Override
+	public void updateView(Bundle parametro) {
+		Toast.makeText(this, "OK", Toast.LENGTH_SHORT).show();
+		
+	}
+
+
+	
+
+
+	@Override
+	public IAssyncTask getTransactionTask() {
+		// TODO Auto-generated method stub
+		return this;
+	}
+
+
+	@Override
+	public void initComponentes() {
+		// TODO Auto-generated method stub
 		
 	}
 

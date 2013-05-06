@@ -195,9 +195,9 @@ public class MapaParadasFR extends OpenDocsFragmentActivity implements
 			GeoPoint point = new GeoPoint(lat.intValue(), 
 					                      log.intValue());
 			
-			
-			
-			if(calcularDistanciaCentroMapa(point) < 5000){
+			float distanciaTela   = ConvertToLatLong.getDistanciaCentroToTopLeftMap(mapView);
+			float distanciaParada = calcularDistanciaCentroMapa(point);
+			if( distanciaParada < distanciaTela){
 				OverlayItemParada oItemParada = new OverlayItemParada(point, parada);
 				listaPontosParadas.addOverlay(oItemParada, getResources().getDrawable(R.drawable.mk_parada));
 			}

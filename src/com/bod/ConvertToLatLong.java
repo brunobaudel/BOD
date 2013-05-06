@@ -110,23 +110,25 @@ public class ConvertToLatLong {
 		List<String> grausMin = new ArrayList<String>(Arrays.asList(graus.split(" ")));
 		
 		List<Double> doubles = new ArrayList<Double>();
-	
-		for (String string : grausMin) {
-			
-			if(TextUtils.isEmpty(string)){ continue; }
-			
-			doubles.add(Double.valueOf(string));
-			
-		}
 		Double retorno = 1.0;
 		try{
-			
+			for (String string : grausMin) {
+				
+				if(TextUtils.isEmpty(string)){ continue; }
+				doubles.add(Double.valueOf(string));
+				
+			}
 			Double	decimal = (((doubles.get(1) * 60)+doubles.get(2)) / (60*60));
 			retorno = doubles.get(0) + decimal;
 		}catch (Exception e) {
-			 Log.d("Erro no ponto ",  graus);
+			 
+			 try{
+			 retorno = Double.valueOf(graus.replace("\"", ""));
+			 }catch (Exception e2) {
+				 retorno = 1.0;
+				 Log.d("Erro no ponto ",  graus);
+			}
 		}
-		
 		
 		return retorno  ;
 		
