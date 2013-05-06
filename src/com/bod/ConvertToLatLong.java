@@ -133,7 +133,7 @@ public class ConvertToLatLong {
 		return retorno  ;
 		
 	}
-	
+	    
 	public static float getDistanciaCentroToTopLeftMap(MapView mapView){
 		
 		GeoPoint center  = mapView.getMapCenter();
