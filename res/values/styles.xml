@@ -1,0 +1,98 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+      <style name="TextViewStyle_tela_configuracao_anuncio">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">#0e7dc2</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+    
+    <style name="TextViewStyle_tela_confirmacao_anuncio_campo">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:textColor">#DCDCDC</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+    
+    <style name="TextViewStyle_tela_confirmacao_anuncio_descricao">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">#0e7dc2</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+    
+    <style name="TextViewStyle_item_lista_produtos">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+    
+     <style name="ButtonStyle_tela_menu_conta_usuario">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    
+      <style name="ButtonStyle_tela_container_busca_configuracoes">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+       <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:textSize">18dp</item>
+        
+    </style>
+    
+     
+    <style name="Titulos_telas_configuracao">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">#0e7dc2</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:textSize">20dp</item>
+       
+    </style>
+    
+    <style name="EditTextStyle_SellIt">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginLeft">5dp</item>
+       	<item name="android:layout_marginRight">5dp</item>
+       <item name="android:background">@drawable/bg_campo_form</item>
+       
+    </style>
+    
+    
+    
+    <color name="FundoTelas">#ffffff</color>
+    
+    <color name="FundoItem">#0486ba</color>
+    
+</resources>

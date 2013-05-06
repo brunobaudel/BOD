@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.google.android.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:apiKey="0TnnF1_FxVe65frNDjuQXnsuitB-2_7fubgQ34Q"
+        android:clickable="true" >
+    </com.google.android.maps.MapView>
+
+    <LinearLayout
+        android:id="@+id/llTempoSolicitacao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <AutoCompleteTextView
+            android:id="@+id/actvEndereco"
+            style="@style/EditTextStyle_SellIt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="Digite o endereço procurado"
+            android:visibility="invisible" >
+
+            <requestFocus />
+        </AutoCompleteTextView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="9dp"
+        android:background="@null"
+        />
+
+</RelativeLayout>
