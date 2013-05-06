@@ -10,6 +10,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.google.android.maps.GeoPoint;
+import com.google.android.maps.MapView;
+
+import android.location.Location;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -128,7 +132,26 @@ public class ConvertToLatLong {
 		
 	}
 	
-	
+	public static float getDistanciaCentroToTopLeftMap(MapView mapView){
+		
+		GeoPoint center  = mapView.getMapCenter();
+		GeoPoint topLeft = mapView.getProjection().fromPixels(0, 0);
+		
+		
+		Location locationTopLeft = new Location("locationTopLeft");
+		locationTopLeft.setLongitude(topLeft.getLongitudeE6()/1E6);
+		locationTopLeft.setLatitude(topLeft.getLatitudeE6()/1E6);
+		
+		
+		Location locationCenter = new Location("locationCenter");
+		locationCenter.setLongitude(center.getLongitudeE6()/1E6);
+		locationCenter.setLatitude(center.getLatitudeE6()/1E6);
+		
+		
+		return locationCenter.distanceTo(locationTopLeft);
+		
+		
+	}
 	
 	
 	
