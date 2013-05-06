@@ -30,7 +30,7 @@ public class ContainerBusca extends FragmentActivity implements
 		
 		mMapViewContainer = LayoutInflater.from( this ).inflate( R.layout.tela_mapa_buscar_anuncio, null );
 		mMapView = (MapView)mMapViewContainer.findViewById( R.id.mapview );
-		
+		   
 
 		
 		updateFr("telaMapa");
